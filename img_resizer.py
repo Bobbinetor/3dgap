@@ -12,4 +12,4 @@ def resize_image(input_image_path, output_image_path, size):
     resized_image.save(output_image_path)
 
 # Usage
-resize_image('working/image8.jpeg', 'working/p9.png', (600, 600))
+resize_image('img/logo2.png', 'img/logo2.png', (60, 60))

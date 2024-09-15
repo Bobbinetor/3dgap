@@ -153,9 +153,10 @@ section {
 .navbar-brand {
 	background-repeat: no-repeat;
 	background-position: left center;
-	width: 75px; /* Adjust the width to your desired size */
-	height: 75px;
-	padding: 24px 0;
+	width: 60px; /* Adjust the width to your desired size */
+	height: 77px;
+	background-size: contain;
+	padding: 0px 0;
 	text-indent: -99999px;
 	font-size: 24px;
 	font-weight: 600;
@@ -187,7 +188,7 @@ section {
 	text-transform: uppercase;
 	font-size: 13px;
 	font-weight: 600;
-	color:#33d3e8 !important;
+	color:#fcfcfc !important;
 
 }
 
@@ -270,30 +271,70 @@ section {
 /* ===== End navbar ===== */
 
 
-/* ===== Begin intro ===== */
 /* Begin text carousel intro */
 #text-carousel-intro-section {
-	height: 100%;
+    position: relative;
+    height: 100vh; /* Occupare l'intera altezza della finestra */
+    overflow: hidden;
 }
+
+#text-carousel-intro-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Coprire l'intera sezione senza distorsioni */
+    z-index: 1; /* Video sotto il contenuto */
+}
+
 #text-carousel-intro-section .container {
-	height: 100%;
+    position: relative;
+    z-index: 2; /* Testo sopra il video */
+    height: 100%;
 }
+
 #text-carousel-intro-section .caption {
-	position: relative;
-	top: 50%;
-	margin-top: -70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 3; /* Ancora più in alto per garantire la visibilità */
+    background-color: rgba(0, 0, 0, 0); /* Sfondo trasparente per migliorare la leggibilità */
+    padding: 0px;
+    border-radius: 10px;
+    width: 80%; /* Evita la compressione del testo */
+    max-width: 800px; /* Limita la larghezza massima su schermi più grandi */
 }
+
 #text-carousel-intro-section .caption h1 {
-	margin-top: 0;
-	margin-bottom: 5px;
-	font-size: 60px;
-	text-transform: uppercase;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 45px; /* Regola la dimensione del testo per schermi più piccoli */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombra per migliorare la leggibilità */
 }
+
 #text-carousel-intro-section .caption p {
-	letter-spacing: 2px;
-	font-size: 16px;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
+
+/* Aggiungi regole per lo slider */
+#owl-intro-text .owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Assicura che gli elementi riempiano l'altezza disponibile */
+}
+
+.owl-carousel .owl-item {
+    width: 100%;
+}
+
+
 /* End text carousel intro */
 /* ===== End intro ===== */
 
