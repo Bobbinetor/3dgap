@@ -144,6 +144,23 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
 
+
+
+	#background-video {
+        height: 100%; /* Make sure the video takes the full height */
+        width: 100%; /* Scale the video width to fit the screen */
+        object-fit: cover; /* Ensures the video adapts to the container without stretching */
+    }
+
+    /* Adjust text size in the carousel to fit mobile */
+    #text-carousel-intro-section .caption h1 {
+        font-size: 24px; /* Adjust the font size for smaller screens */
+    }
+
+    #text-carousel-intro-section .caption p {
+        font-size: 14px;
+    }
+
 	/* Navbar brand */
 	.navbar-brand, .navbar-brand:focus {
 		margin-left: 10px;
@@ -269,6 +286,21 @@
 	/* Team */
 	 #team-section .col-md-2 {
         width: 100%;
+    }
+
+	#background-video {
+        height: 100%; /* Ensure the video covers the full container */
+        width: 100%;
+        object-fit: cover; /* Prevents distortion */
+    }
+
+    /* Adjust text size */
+    #text-carousel-intro-section .caption h1 {
+        font-size: 28px;
+    }
+
+    #text-carousel-intro-section .caption p {
+        font-size: 16px;
     }
 
 }
