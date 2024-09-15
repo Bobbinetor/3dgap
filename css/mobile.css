@@ -289,6 +289,7 @@
     }
 
 	#background-video {
+		display: none;
         height: 100%; /* Ensure the video covers the full container */
         width: 100%;
         object-fit: cover; /* Prevents distortion */
