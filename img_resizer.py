@@ -12,5 +12,4 @@ def resize_image(input_image_path, output_image_path, size):
     resized_image.save(output_image_path)
 
 # Usage
-resize_image('/home/bobbinetor/personal/3dgap_website/3dgap/img/logo.png', 
-             '/home/bobbinetor/personal/3dgap_website/3dgap/img/logo2.png', (80, 80))
+resize_image('working/image8.jpeg', 'working/p9.png', (600, 600))
